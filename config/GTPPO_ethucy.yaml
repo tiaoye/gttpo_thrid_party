@@ -1,0 +1,45 @@
+# training params
+batch_size: 64
+num_epochs: 400
+
+# training mode: resursive, teacher_forcing, mixed
+teaching_mode: teacher_forcing
+teacher_forcing_ratio: 0.5
+
+test_rounds: 10
+lr:
+  base_lr: 0.001
+  # encoder_decoder: 0.001
+  latent_predictor: 0.0001
+
+# KL loss ratio
+KL_loss_ratio: 1
+
+obs_len: 8
+pred_len: 12
+# num of trajectories for each pedestrian, sample_num for latent predictor
+pred_num: 20
+
+# dataset params
+skip: 1
+non_linear_threshold: 0.002
+min_ped: 1
+
+# model params
+dropout: 0.1
+gru_hidden_size: 32
+gru_num_layers: 1
+gru_input_size: 16
+
+max_ped_num: 20
+leakyrelu_input_slope: 0.2
+graph_attention_num_layers: 2
+graph_attention_hidden_size: 64
+social_attention_mode: SSA
+
+latent_dim: 4
+
+# use intention cluster
+use_intention_cluster: True
+intention_cluster_num: 4
+intention_loss_ratio: 0.5

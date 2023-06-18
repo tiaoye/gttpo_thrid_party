@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/*
+pretrained_models/*
+segmentation_models/*
+outout/*
+output
+ynet.code-workspace
